@@ -1,0 +1,26 @@
+html, body { margin: 0; min-height: 100%; background: #07030f; color: #f2f0f4; font: 15px/1.45 system-ui, -apple-system, sans-serif; }
+.app { display: flex; gap: 28px; align-items: flex-start; justify-content: center; padding: 24px; box-sizing: border-box; flex-wrap: wrap; }
+.controls { display: flex; flex-direction: column; gap: 13px; width: 320px; max-width: 94vw; }
+.controls h1 { margin: 0; font-size: 30px; letter-spacing: 0.5px; background: linear-gradient(90deg, #39ff88, #37e6ff 55%, #ff4fd8); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.tag { margin: 0; color: #b9a8d6; }
+.field { border: 1px solid #2c2140; border-radius: 10px; padding: 10px 12px; display: flex; flex-direction: column; gap: 8px; font-weight: 600; }
+.field legend { padding: 0 6px; color: #39ff88; }
+.hint { margin: 0; color: #9a8bb5; font-weight: 400; font-size: 13px; }
+.fine { margin: 0; color: #6f6390; font-size: 12px; }
+input[type=text] { font: inherit; padding: 9px 10px; border: 1px solid #453a5e; border-radius: 7px; background: #150b28; color: #fff; }
+input[type=file] { font: inherit; color: #d9cdf0; }
+input[type=range] { width: 100%; accent-color: #39ff88; }
+.check { display: flex; gap: 8px; align-items: center; font-weight: 600; }
+.layouts, .sizes { display: flex; flex-wrap: wrap; gap: 7px; }
+.layouts button, .sizes button { font: inherit; font-weight: 700; padding: 8px 11px; border: 1px solid #453a5e; border-radius: 7px; background: #150b28; color: #e8e2f5; cursor: pointer; }
+.layouts button[aria-pressed="true"], .sizes button[aria-pressed="true"] { background: #39ff88; color: #07130b; border-color: #39ff88; }
+button { font: inherit; font-weight: 700; padding: 10px; border: 0; border-radius: 8px; background: #2c2140; color: #fff; cursor: pointer; }
+button.export { background: linear-gradient(90deg, #39ff88, #ff4fd8); color: #0a0616; font-size: 17px; padding: 13px; }
+button:hover { filter: brightness(1.15); }
+#status { margin: 0; min-height: 1.2em; color: #39ff88; }
+.preview { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+.preview canvas { width: min(78vh, 62vw, 720px); height: auto; box-shadow: 0 0 0 2px #39ff88, 0 12px 44px rgba(255, 79, 216, 0.35); cursor: crosshair; background: #07030f; }
+body.shot-cover .controls, body.shot-cover .preview .hint { display: none; }
+body.shot-cover .app { padding: 0; }
+body.shot-cover .preview canvas { width: 100vw; height: 100vh; box-shadow: none; }
+@media (max-width: 760px) { .preview canvas { width: 94vw; } }

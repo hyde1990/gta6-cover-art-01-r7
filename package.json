@@ -1,0 +1,1 @@
+{"description":"Vice Cover Studio — Simian Cyber World: turn a photo and a caption into GTA 6-style multi-panel cover art, exported as PNG.","license":"MIT","name":"gta6-cover-art-01-r7","private":true,"scripts":{"shots":"node tools/shots-driver.mjs","start":"node serve.ts","test":"node --test"},"type":"module","version":"1.0.0"}

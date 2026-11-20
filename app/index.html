@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice Cover Studio — Simian Cyber World</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main class="app">
+  <section class="controls" aria-label="Cover editor">
+    <h1>Vice Cover Studio</h1>
+    <p class="tag">Simian Cyber World — your photo, six panels, one neon cover.</p>
+
+    <label class="field">Photos (one or several, from your machine)
+      <input id="photos" type="file" accept="image/*" multiple>
+    </label>
+    <p class="hint">Photos are read in your browser and never uploaded. One photo fills every panel; add more to fill panels individually.</p>
+
+    <fieldset class="field">
+      <legend>Layout</legend>
+      <div class="layouts" id="layouts"></div>
+    </fieldset>
+
+    <label class="field">Caption line 1
+      <input id="caption1" type="text" maxlength="60" value="SIMIAN CITY">
+    </label>
+    <label class="field">Caption line 2
+      <input id="caption2" type="text" maxlength="60" value="Cyber Jungle Nights">
+    </label>
+
+    <label class="field">Neon glow <span id="glowValue">60%</span>
+      <input id="glow" type="range" min="0" max="100" value="60">
+    </label>
+    <label class="check"><input id="sweep" type="checkbox" checked> Light sweep in preview</label>
+
+    <fieldset class="field">
+      <legend>Selected panel — click the preview to pick one</legend>
+      <p class="hint" id="panelName">No panel selected.</p>
+      <label>Zoom <input id="zoom" type="range" min="50" max="400" value="100"></label>
+      <label>Pan left–right <input id="panX" type="range" min="-100" max="100" value="0"></label>
+      <label>Pan up–down <input id="panY" type="range" min="-100" max="100" value="0"></label>
+      <button id="fillAll" type="button">Fill all panels with the first photo</button>
+    </fieldset>
+
+    <fieldset class="field">
+      <legend>Export size</legend>
+      <div class="sizes" id="sizes"></div>
+    </fieldset>
+
+    <button id="export" type="button" class="export">Export PNG</button>
+    <p id="status" role="status"></p>
+    <p class="fine">Original work: the Simian Prime art is drawn by code. No Rockstar logo, artwork or font.</p>
+  </section>
+  <section class="preview" aria-label="Cover preview">
+    <canvas id="cover" width="720" height="720" aria-label="The cover preview"></canvas>
+    <p class="hint">Click a panel in the preview to crop and position that photo.</p>
+  </section>
+</main>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
